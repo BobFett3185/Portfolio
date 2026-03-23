@@ -2,27 +2,49 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: 'Bebas Neue', Tahoma, Geneva, Verdana, sans-serif;
-  background: #0a0a0a;
+  background-color: #0a0a0a;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+  background-size: 40px 40px;
   text-align: center;
-
-
 }
 
-.content{
+.app {
   width: 100%;
-  height: auto; 
-  margin: auto; 
+  margin: 0 auto;
   max-width: 1200px;
-  padding: 40px 0 40px 0; 
-
-  position: relative;
-
+  padding: 60px 16px 120px;
+  box-sizing: border-box;
+  text-align: left;
 }
+
+section {
+  margin-bottom: 80px;
+}
+
+.projects-title,
+.contact-title {
+  font-size: 2rem;
+  margin-bottom: 24px;
+  color: rgb(182, 179, 179);
+}
+
+.content {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  max-width: 1200px;
+  padding: 40px 0;
+  position: relative;
+}
+
 
 .hero-back{
   width: 100%;
   height: calc(100vh);
   background: url('/hero7.png') no-repeat 50% 50%;
+  background-image: 
+    linear-gradient(rgba(240, 240, 240, 0.15), rgba(240, 240, 240, 0.15)),
+    url('/hero7.png');
   background-size: cover;
   position: relative;
   display: block;
@@ -37,21 +59,19 @@ html, body {
 }
 
 h1{
-  font-family: 'Bebas Neue', Tahoma, Geneva, Verdana, sans-serif;
-  color: #fff;
+  font-family: 'Plus Jakarta Sans', sans-serif;  color: #8f1616;
 }
 
 h2{
-  font-family: 'Bebas Neue', Tahoma, Geneva, Verdana, sans-serif;
-  color: #fff;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: rgb(182, 179, 179);;
 
 }
 
 
 p{
-  font-family: 'Bebas Neue', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 30px;
-  color: #fff; 
+  font-family: 'Plus Jakarta Sans', sans-serif;  line-height: 30px;
+  color: #9b8080; 
   font-weight: lighter; 
 
 }
@@ -59,7 +79,7 @@ p{
 
 
 .block-text {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 60px;
     transform: translate(-50%, -50%);
 
@@ -89,24 +109,30 @@ p{
 }
 
 /* Projects Section */
-.projects-section {
-  padding: 80px 40px;
-  background: #0a0a0a;
-  text-align: center;
-}
+
+
 
 .projects-section h2 {
   font-size: 48px;
   font-weight: 700;
-  color: #fff;
+  color: rgb(182, 179, 179);
   margin-bottom: 60px;
-  font-family: 'Bebas Neue', Tahoma, Geneva, Verdana, sans-serif;
-}
+  font-family: 'Plus Jakarta Sans', sans-serif;}
 
 .cards-container {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.cards-container2 { /* for if we want to add more projects in the future */
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
@@ -124,8 +150,8 @@ p{
   justify-content: space-between;
   transition: all 0.3s ease;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
-  font-family: 'Bebas Neue', Tahoma, Geneva, Verdana, sans-serif;
-  color: #fff;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: rgb(182, 179, 179);
 }
 
 
@@ -136,11 +162,17 @@ p{
   color: #103e29;
   margin: 0;
   text-align: left;
+  /* Creates a sharp 'outline' by placing shadows in all 4 corners */
+  text-shadow: 
+    -1px -1px 0 rgb(182, 179, 179),  
+     1px -1px 0 rgb(182, 179, 179),
+    -1px  1px 0 rgb(182, 179, 179),
+     1px  1px 0 rgb(182, 179, 179);
 }
 
 .card-description {
   font-size: 16px;
-  color: #e5e7eb;
+  color: rgb(182, 179, 179);
   margin: 4px 0 0 0;
   text-align: left;
 }
@@ -169,10 +201,54 @@ p{
 }
 
 /* intro container */
-.intro{
-  margin-left: 250px;
-  margin-right: 250px; 
+.intro {
+  margin: 0 auto 80px;
+  padding: 40px 20px;
+  max-width: 900px;
   font-family: 'Bebas Neue';
   color: #103e29;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 4px;
+  background: rgba(0,0,0,0.35);
 }
 
+.intro-text h2 {
+  color: rgb(182, 179, 179);
+  line-height: 1.5;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 16px 0;
+}
+
+.intro-text p {
+  color: #888;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.contact-section {
+  margin: 0 auto 80px;
+  padding: 40px 20px;
+  max-width: 900px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 4px;
+  background: rgba(0,0,0,0.35);
+}
+
+.contact-info p {
+  margin: 8px 0;
+  color: #ddd;
+}
+
+
+
+a {
+  text-decoration: none;
+  color: inherit; 
+  cursor: pointer;
+}
+
+a:hover {
+  opacity: 0.7;
+}
