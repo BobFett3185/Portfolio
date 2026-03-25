@@ -6,6 +6,10 @@ html, body {
   background-image: radial-gradient(circle, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
   background-size: 40px 40px;
   text-align: center;
+
+
+  cursor: url('/cursor2.svg') 16 16, auto;
+
 }
 
 .app {
@@ -21,11 +25,13 @@ section {
   margin-bottom: 80px;
 }
 
+.
+/* Use hero name color for section titles */
 .projects-title,
 .contact-title {
   font-size: 2rem;
   margin-bottom: 24px;
-  color: rgb(182, 179, 179);
+  color: #103e29;
 }
 
 .content {
@@ -58,8 +64,20 @@ section {
 
 }
 
+.hero-gradient-bottom {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 180px;
+  pointer-events: none;
+  z-index: 20;
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(20,20,20,0.7) 60%, #0a0a0a 100%);
+}
+
 h1{
-  font-family: 'Plus Jakarta Sans', sans-serif;  color: #8f1616;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #103e29;
 }
 
 h2{
@@ -70,23 +88,35 @@ h2{
 
 
 p{
-  font-family: 'Plus Jakarta Sans', sans-serif;  line-height: 30px;
-  color: #9b8080; 
-  font-weight: lighter; 
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  line-height: 30px;
+  color: #9b8080;
+  font-weight: lighter;
+}
+
+/* Accent color for strong and links */
+strong, b, a:hover {
+  color: #103e29;
 
 }
 
 
 
 .block-text {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 60px;
-    transform: translate(-50%, -50%);
-
-    text-transform: uppercase; /* Makes letters block caps */
-    color: #103e29;
-
-  }
+  font-family: 'Bebas Neue', 'Impact', 'Oswald', 'Arial Black', 'Plus Jakarta Sans', sans-serif;
+  font-size: 150px;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  color: #103e29;
+  letter-spacing: 0.08em;
+  /* 3D effect with multiple shadows, no white outline */
+  text-shadow:
+    0 4px 0 #b2b2b2,
+    0 12px 12px rgba(0,0,0,0.25),
+    4px 4px 0 #0a0a0a,
+    8px 8px 0 #0a0a0a;
+  font-weight: 900;
+}
 
 .image-container {
   position: relative; /* Container is the reference point for absolute positioning */
@@ -115,14 +145,15 @@ p{
 .projects-section h2 {
   font-size: 48px;
   font-weight: 700;
-  color: rgb(182, 179, 179);
+  color: #103e29;
   margin-bottom: 60px;
-  font-family: 'Plus Jakarta Sans', sans-serif;}
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
 
 .cards-container {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
@@ -206,18 +237,18 @@ p{
   padding: 40px 20px;
   max-width: 900px;
   font-family: 'Bebas Neue';
-  color: #103e29;
+  color: #fff;
   border: 1px solid rgba(255,255,255,0.12);
   border-radius: 4px;
   background: rgba(0,0,0,0.35);
 }
 
 .intro-text h2 {
-  color: rgb(182, 179, 179);
+  color: #62776d;
   line-height: 1.5;
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 700;
   margin: 16px 0;
 }
 
@@ -251,4 +282,26 @@ a {
 
 a:hover {
   opacity: 0.7;
+}
+
+.dot-glow {
+  position: fixed;
+  inset: 0; /* Shorthand for top/left/right/bottom: 0 */
+  pointer-events: none; /* Crucial: so you can still click buttons underneath! */
+  
+  /* The "Bright" dots */
+  background-image: radial-gradient(circle, rgba(200, 200, 200, 0.8) 1.5px, transparent 1.5px);
+  background-size: 30px 30px;
+
+  /* The "Flashlight" mask */
+  mask-image: radial-gradient(
+    circle 100px at var(--mouse-x) var(--mouse-y), 
+    black 20%, 
+    transparent 100%
+  );
+  -webkit-mask-image: radial-gradient(
+    circle 100px at var(--mouse-x) var(--mouse-y), 
+    black 20%, 
+    transparent 100%
+  );
 }

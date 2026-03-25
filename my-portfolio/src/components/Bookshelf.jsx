@@ -1,13 +1,10 @@
-function IntroSection({ text }) {
+function IntroSection({ books }) {
   return (
-
     <section className="intro">
-      <h1 className="projects-title" style={{ textAlign: 'center' }}>About</h1>
-
       <div className="intro-text" style={{ textAlign: 'center' }}>
 
         <p>----------------------------------------------------------------------------------------------------------</p>
-        <h2 className="engraved">{text}</h2>
+        <h2 className="engraved">My Bookshelf</h2>
         <p>----------------------------------------------------------------------------------------------------------</p>
       </div>
     </section>

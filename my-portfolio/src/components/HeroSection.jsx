@@ -25,6 +25,8 @@ function HeroSection({ name = 'Keane Ferdinand' }) {
       <div className="hero-text">
         <h1 className="block-text">{name}</h1>
       </div>
+      {/* Gradient overlay for smooth transition */}
+      <div className="hero-gradient-bottom" />
     </div>
   );
 }
