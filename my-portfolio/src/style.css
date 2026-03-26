@@ -1,3 +1,114 @@
+/* Restore project cards grid layout */
+.cards-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+/* Green, rounded style for ThoughtSection cards */
+.thought-card {
+  background: linear-gradient(135deg, #2d4636 80%, #3e5c47 100%);
+  border-radius: 14px;
+  border: 2px dotted #7fcf8a;
+  box-shadow: 0 2px 10px rgba(16,62,41,0.10);
+  padding: 18px 14px 14px 14px;
+  margin: 0 0 8px 0;
+  color: #e6fbe6;
+  font-style: italic;
+  font-size: 0.98rem;
+  transition: transform 0.18s, box-shadow 0.18s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 110px;
+  max-width: 90%;
+}
+.thought-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(127,207,138,0.13);
+}
+
+/* Lighter green for text below hero */
+.projects-title,
+.contact-title,
+{
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #103e29 !important;
+  margin-bottom: 8px;
+  text-align: center;
+  letter-spacing: 0.08em;
+  text-shadow:
+    0 2px 8px rgba(0,0,0,0.25),
+    0 1px 0 #fff,
+    -1px 0 0 #fff,
+    1px 0 0 #fff,
+    0 -1px 0 #fff,
+    0 1px 0 #fff;
+  -webkit-text-stroke: 0.5px #fff;
+}
+.book-info{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+/* Bookshelf grid layout */
+.bookshelf-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+  justify-items: center;
+  margin: 32px 0 0 0;
+}
+
+.book-card {
+  background: rgba(20, 20, 20, 0.85);
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  width: 200px;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 14px 16px 14px;
+  transition: transform 0.18s;
+}
+.book-card:hover {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 6px 24px rgba(16,62,41,0.18);
+}
+.book-cover {
+  width: 100px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+.book-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.book-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+  text-align: center;
+}
+.book-description {
+  font-size: 0.85rem;
+  color: #b6b3b3;
+  text-align: center;
+}
 html, body {
   margin: 0;
   padding: 0;
@@ -28,19 +139,21 @@ section {
 .
 /* Use hero name color for section titles */
 .projects-title,
-.contact-title {
-  font-size: 2rem;
-  margin-bottom: 24px;
-  color: #103e29;
-}
-
-.content {
-  width: 100%;
-  height: auto;
-  margin: auto;
-  max-width: 1200px;
-  padding: 40px 0;
-  position: relative;
+.contact-title,
+.card-title,
+.intro-text h2 {
+  color: #103e29 !important;
+  font-size: 2.3rem;
+  font-weight: 800;
+  letter-spacing: 3cm;
+  text-shadow:
+    0 2px 8px rgba(0,0,0,0.25),
+    0 1px 0 #fff,
+    -1px 0 0 #fff,
+    1px 0 0 #fff,
+    0 -1px 0 #fff,
+    0 1px 0 #fff;
+  -webkit-text-stroke: 0.5px #fff;
 }
 
 
@@ -77,7 +190,7 @@ section {
 
 h1{
   font-family: 'Plus Jakarta Sans', sans-serif;
-  color: #103e29;
+  color: rgb(182, 179, 179);;
 }
 
 h2{
@@ -150,25 +263,16 @@ strong, b, a:hover {
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-.cards-container {
+.cards-container2 {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  max-width: 1200px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 0 10px;
 }
 
-.cards-container2 { /* for if we want to add more projects in the future */
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 10px;
-}
 
 .card {
   border: 2px solid #333;
@@ -227,9 +331,6 @@ strong, b, a:hover {
   transform: none;
 }
 
-.card-1, .card-2, .card-3 {
-  z-index: auto;
-}
 
 /* intro container */
 .intro {
@@ -305,3 +406,4 @@ a:hover {
     transparent 100%
   );
 }
+

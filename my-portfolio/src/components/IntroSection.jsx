@@ -2,7 +2,7 @@ function IntroSection({ text }) {
   return (
 
     <section className="intro">
-      <h1 className="projects-title" style={{ textAlign: 'center' }}>About</h1>
+      <h1 className="engraved" style={{ textAlign: 'center' }}> About </h1>
 
       <div className="intro-text" style={{ textAlign: 'center' }}>
 

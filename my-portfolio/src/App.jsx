@@ -5,6 +5,13 @@ import ProjectSection from './components/ProjectSection';
 import ThoughtSection from './components/ThoughtSection';
 import ContactSection from './components/ContactSection';
 import Bookshelf from './components/Bookshelf';
+import Book from './components/Book';   
+
+
+
+// here are the variables we pass to our components as props
+
+const introText = "Hello! My name is Keane and I am a Computer Science student at the University of Texas @ Dallas. Through my educational journey I have become deeply fascinated by AI/ML Engineering in FinTech. I hope this website can help you get to know me as a professional and as an individual.";
 
 const projectList = [
   { id: 'p1', title: 'ComplyRag', description: 'RAG system for a compliance assistant, with automated regulation ingestion pipeline. Deployed using Docker and EC2', date: 'Jan 2026', githubLink: 'https://github.com/BobFett3185/ComplyRag' },
@@ -27,7 +34,15 @@ const contactInfo = {
     github: "https://github.com/BobFett3185"
 };
 
-const books = ["crime and punishment", "for whom the bell tolls", "1984", "frankenstein", "Death of a salesman"];
+const books = [
+  { title: "Crime and Punishment", description: "A psychological thriller exploring morality and redemption.", imageSrc: "/CAP.jpg" },
+  { title: "For Whom the Bell Tolls", description: "A novel about the impact of war on individuals and society.", imageSrc: "/FWTBT.jpg" },
+  { title: "1984", description: "A dystopian social science fiction novel.", imageSrc: "/1984.jpg" },
+  { title: "Frankenstein", description: "A gothic science fiction novel about creation and responsibility.", imageSrc: "/frank.jpg" },
+  { title: "Death of a Salesman", description: "A play about the American Dream and its consequences.", imageSrc: "/doas.jpg" }
+];
+
+
 
 function App() {
   return (
@@ -37,16 +52,23 @@ function App() {
       <HeroSection name="Keane Ferdinand" />
 
       <main className="app">
-      
-        <IntroSection
-          text="Hello! My name is Keane and I am a Computer Science student at the University of Texas @ Dallas. Through my educational journey I have become deeply fascinated by AI/ML Engineering in FinTech. I hope this website can help you get to know me as a professional and as an individual."
-        />
+        <br></br><br></br><br></br><br></br><br></br>
 
+        <IntroSection text= {introText}/>
+
+        <br></br><br></br><br></br><br></br><br></br>
+        
         <ProjectSection projects={projectList} />
+        
+        <br></br><br></br><br></br><br></br><br></br>
 
         <ThoughtSection thoughts={thoughtList} />
 
+        <br></br><br></br><br></br>
+
         <Bookshelf books={books} />
+        
+        <br></br><br></br><br></br><br></br><br></br>
 
         <ContactSection contactInfo={contactInfo} />
 

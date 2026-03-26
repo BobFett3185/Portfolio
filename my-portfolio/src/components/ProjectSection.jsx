@@ -3,7 +3,9 @@ import Card from './Card';
 function ProjectSection({ projects }) {
   return (
     <section>
-      <h1 className="projects-title">Projects</h1>
+      <h1 className="engraved" style={{ textAlign: 'center' }}>My Projects</h1>
+      <br></br><br></br>
+
       <div className="cards-container">
         {projects.map((project) => (
           <Card

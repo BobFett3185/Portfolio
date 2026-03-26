@@ -1,7 +1,7 @@
 function ContactSection({contactInfo}) {
   return (
     <section className="contact-section">
-      <h1 className="contact-title">Contact Me</h1>
+      <h1 className="engraved" style={{ textAlign: 'center' }}>Contact Me</h1>
       <div className="contact-info">
         <p> {contactInfo.email}</p>
         <p> <a href={contactInfo.linkedIn} target="_blank" rel="noopener noreferrer">
